@@ -28,7 +28,6 @@ jobs:
           path: ./dist
 
   deploy:
-    # Add a dependency to the build job
     needs: build
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
