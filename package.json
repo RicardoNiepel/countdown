@@ -13,8 +13,10 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "pre-commit": [ "precommit-msg", "format", "lint" ],
   "dependencies": {
     "pinia": "^2.1.7",
     "vue": "^3.4.15"
@@ -36,6 +38,7 @@
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^24.0.0",
     "npm-run-all2": "^6.1.1",
+    "pre-commit": "^1.2.2",
     "prettier": "^3.0.3",
     "start-server-and-test": "^2.0.3",
     "ts-node": "^10.9.2",
